@@ -6,6 +6,13 @@ import App from './App.jsx'
 import { AuthProvider } from './context/AuthContext.jsx'
 import { ProjectProvider } from './context/ProjectContext.jsx'
 import { TaskProvider } from './context/TaskContext.jsx'
+import axios from 'axios';
+
+axios.defaults.baseURL = import.meta.env.PROD
+  ? 'https://ethara-ai-assignment-f2at.onrender.com'
+  : '';
+
+axios.defaults.withCredentials = true;
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
