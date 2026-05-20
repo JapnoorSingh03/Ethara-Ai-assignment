@@ -15,7 +15,10 @@ connectDB();
 const app = express();
 
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:5173',
+  origin: [
+    'http://localhost:5173',
+    'https://ethara-ai-assignment-nine.vercel.app'
+  ],
   credentials: true,
 }));
 app.use(express.json());
