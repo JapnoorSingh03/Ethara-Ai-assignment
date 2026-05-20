@@ -8,9 +8,7 @@ import { ProjectProvider } from './context/ProjectContext.jsx'
 import { TaskProvider } from './context/TaskContext.jsx'
 import axios from 'axios';
 
-axios.defaults.baseURL = import.meta.env.PROD
-  ? 'https://ethara-ai-assignment-f2at.onrender.com'
-  : '';
+axios.defaults.baseURL = 'https://ethara-ai-assignment-f2at.onrender.com';
 
 axios.defaults.withCredentials = true;
 
